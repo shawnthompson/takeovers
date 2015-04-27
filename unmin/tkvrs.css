@@ -28,14 +28,107 @@
 		webkit-transform: translateY(0);
 	}
 }
-#tkvrbar.wb-init
+
+/* Slide in right */
+@-webkit-keyframes slideInRight
 {
-	animation-delay: 3s;
+	 0% {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        }
+        100% {
+        transform: translate3d(0, 0, 0);
+        }
+}
+@keyframes slideInRight
+{
+	0% {
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        }
+        100% {
+        transform: translate3d(0, 0, 0);
+        }
+}
+
+/* Slide in right */
+@-webkit-keyframes slideInLeft
+{
+	 0% {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes slideInLeft
+{
+	 0% {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+#tkvrbar.wb-init.open
+{
+	/* animation-delay: 3s; */
 	animation-duration: 1s;
 	animation-fill-mode: both;
 	animation-name: slideInUp;
-	webkit-animation-delay: 3s;
+	/* webkit-animation-delay: 3s; */
 	webkit-animation-duration: 1s;
 	webkit-animation-fill-mode: both;
 	webkit-animation-name: slideInUp;
+}
+
+#lfttkvr.wb-init.open
+{
+	/* animation-delay: 3s; */
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-name: slideInLeft;
+	/* webkit-animation-delay: 3s; */
+	webkit-animation-duration: 1s;
+	webkit-animation-fill-mode: both;
+	webkit-animation-name: slideLeft;
+}
+
+#rghttkvr.wb-init.open
+{
+	/* animation-delay: 3s; */
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-name: slideInRight;
+	/* webkit-animation-delay: 3s; */
+	webkit-animation-duration: 1s;
+	webkit-animation-fill-mode: both;
+	webkit-animation-name: slideInRight;
+}
+
+
+.takeover .modal-body {
+  padding: 0;
+  background: none;
+  background: url('grad.gif') repeat-x top left;
+}
+
+/*
+Left and Right panel
+*/
+
+#lfttkvr, #rghttkvr {
+    background: url('grad-vertical.gif') #012e67 repeat-x top left;
+}
+
+#lfttkvr .modal-body, #rghttkvr .modal-body {
+    padding: 0;
+}
+
+#lfttkvr .img-responsive, #rghttkvr .img-responsive {
+    max-width: 200px;
 }

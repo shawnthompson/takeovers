@@ -1,7 +1,7 @@
 (function ($) {
     'use strict';
-    
-    $('#tkvrbar').trigger( "open.wb-overlay" );
-    
+    setTimeout(function () {
+        $('.takeover').trigger("open.wb-overlay");
+    }, 1500);
     return true;
 })(jQuery);
